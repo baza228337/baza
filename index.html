@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Один выстрел — кинематографичная 3D-сцена</title>
+    <meta name="description" content="Снайперский выстрел в замедленной съёмке с рентгеном: пуля летит 300 метров и разрывает яблоко. Three.js + Web Audio." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="stage"></div>
+    <canvas id="scope"></canvas>
+    <div class="bar top"></div>
+    <div class="bar bottom"></div>
+    <div id="flash"></div>
+    <div id="captions"></div>
+    <div id="xraytag"><i></i>РЕНТГЕН</div>
+    <div id="hud"></div>
+    <div id="overlay"></div>
+
+    <div id="start">
+      <div class="kicker">кинематографичная 3D-сцена · ~60 секунд</div>
+      <h1>ОДИН ВЫСТРЕЛ</h1>
+      <button id="play" disabled>Загрузка…</button>
+      <div class="hint">🎧 со звуком, лучше в наушниках</div>
+      <div class="keys"><b>Space</b> пауза · <b>M</b> звук · <b>R</b> заново</div>
+      <a class="lite" href="?q=low">слабый компьютер? облегчённая версия</a>
+      <div id="err"></div>
+    </div>
+
+    <div id="end" hidden>
+      <button id="replay">↻ Смотреть ещё раз</button>
+    </div>
+
+    <div id="controls">
+      <button id="mute" title="Звук (M)">🔊</button>
+      <button id="restart" title="Заново (R)">↻</button>
+    </div>
+    <div id="pausetag">ПАУЗА</div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
